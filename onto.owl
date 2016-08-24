@@ -1,0 +1,884 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasACouncilor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasACouncilor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasACouncilor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasACouncilor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Councilor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Deputie"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAMayor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAMayor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAMayor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAMayor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mayor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Agriculture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Agriculture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Army -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Army">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Arts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Arts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Association -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Association">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Citizen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Citizen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Proposals"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialGroup"/>
+        <rdfs:comment>Citizen participation outside institutional policy. Everything related to groups, associations, events, proposals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CivilServant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CivilServant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CongressOfDeputie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CongressOfDeputie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Construction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Construction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Councilor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Councilor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Credits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Credits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Finance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Science"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Sports"/>
+        <rdfs:comment>Everything related to the cultural offerings of a country.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Democracy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Democracy">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Dwelling"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Equality"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices"/>
+        <rdfs:comment>Regulations, laws, policies that make up the democratic system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Deputie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Deputie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Disability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Disability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#DomesticPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#DomesticPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Dwelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Dwelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Democracy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#QuaternarySector"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+        <rdfs:comment>Different sectors of the economy of the country.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ElectricityGeneration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ElectricityGeneration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#EnvironmentalAgents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#EnvironmentalAgents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Equality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Equality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Democracy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Finance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Finance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Fishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Fishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ForeignPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ForeignPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Forestry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Forestry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#LocalGovernment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#MunicipalGovernment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PoliticalParty"/>
+        <rdfs:comment>Everything connected with the central government of a democratic state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Handicraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Handicraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Health">
+        <rdfs:comment>Public health system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#HumanRights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#HumanRights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Justice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Industry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Information_technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Information_technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#QuaternarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Intelligence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Intelligence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Job -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Job">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Justice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Justice">
+        <rdfs:comment>Laws, statutes, justice.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Laws -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Laws">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Justice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Leisure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Leisure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#LocalGovernment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#LocalGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Deputie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mayor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mayor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Minister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Minister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Ministry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Ministry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#MunicipalGovernment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#MunicipalGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasACouncilor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Councilor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAMayor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Mayor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalDebt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalDebt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Finance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasADeputie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Deputie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#hasAPresident"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimeMinister"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PoliticalParty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NaturalEnvironment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NaturalEnvironment">
+        <rdfs:comment>Environmental policies and sustainable development.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ParliamentaryGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ParliamentaryGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CongressOfDeputie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PartyPlatform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PartyPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PoliticalParty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Pensions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Pensions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+        <rdfs:comment>Any person registered in a country.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Police -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Police">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PoliticalParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PoliticalParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Preschool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Preschool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Primary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Primary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimarySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimeMinister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PrimeMinister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#President"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Proposals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Proposals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PublicAdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PublicAdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PublicBanks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PublicBanks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Finance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#QuaternarySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#QuaternarySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Research_and_development -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Research_and_development">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#QuaternarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Secondary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Secondary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SecondarySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Security">
+        <rdfs:comment>National security to protect the State.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Senate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Senate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#NationalGovernment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#CitizenParticipation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Politic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Democracy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Special -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Special">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Sports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Sports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Culture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Tertiary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Tertiary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Economy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Tourism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Tourism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Trade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Trade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#TertiarySector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Unemployment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Unemployment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#SocialServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Vocational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Vocational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Education"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#DL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#DL"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ERC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#ERC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#IU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#IU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PSOE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#PSOE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Podemos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#Podemos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#C&apos;s -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jaime/ontologies/2016/1/untitled-ontology-5#C&apos;s"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
