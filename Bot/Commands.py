@@ -8,7 +8,7 @@ import Strings
 from InformationCommand import InformationCommand
 from DebateCommand import DebateCommand
 
-INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(7)
+INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(9)
 
 class Commands (object):
     
@@ -47,6 +47,10 @@ class Commands (object):
                 #GRAFICOS: [MessageHandler([Filters.text], bio)],
                 
                 #ESTADISTICAS: [MessageHandler([Filters.text], None)],
+                
+                PARTIDOS: [RegexHandler('^(PP|PSOE|Podemos|Ciudadanos|IU|ERC|CDC|PNV)$', InformationCommand.partidos)],
+                
+                REPLY_PARTIDOS: [RegexHandler('^(Noticias|Programa|Candidatos)$', InformationCommand.reply_partidos)],
                 
                 BUSQUEDA: [MessageHandler([Filters.text], InformationCommand.search_results)]
             },

@@ -8,9 +8,10 @@ import Websites
 import Commands
 import telegram
 import Strings
+from Knowledge.News import News
 from nltk.corpus import wordnet as wn
 
-INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(7)
+INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(9)
 
 class InformationCommand (object):
     
@@ -32,7 +33,10 @@ class InformationCommand (object):
             InformationCommand.reformas(bot, update)
             
         elif (user_reply == 'Partidos'):
-            InformationCommand.partidos(bot, update)
+            custom_keyboard = [['PP', 'PSOE', 'Podemos', 'Cuidadanos'], ['IU', 'ERC', 'CDC', 'PNV']]
+            reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+            bot.sendMessage(update.message.chat_id, text='Selecciona uno de los partidos políticos:', reply_markup=ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard=True, resize_keyboard=True))
+            return PARTIDOS
             
         elif (user_reply == 'Graficos'):
             InformationCommand.graficos(bot, update)
@@ -96,7 +100,34 @@ class InformationCommand (object):
         
     @staticmethod
     def partidos(bot, update):
-        pass
+        user = update.message.from_user
+        user_reply = update.message.text
+        bot.political_party = user_reply #Variable que guarda el partido a consultar en la próxima interacción con el ususario
+        custom_keyboard = [['Noticias', 'Programa', 'Candidatos']]
+        reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+        bot.sendMessage(update.message.chat_id, text='¿Qué deseas saber sobre el ' + user_reply.encode('utf8') + '?', reply_markup=ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard=True, resize_keyboard=True))
+        return REPLY_PARTIDOS
+        
+    @staticmethod
+    def reply_partidos(bot, update):
+        user = update.message.from_user
+        user_reply = update.message.text
+        
+        if (user_reply == 'Noticias'):
+            bot_reply = News.getNewsOfPoliticalParty(bot.political_party)
+            bot.sendMessage(update.message.chat_id, text=bot_reply)
+        
+        elif (user_reply == 'Programa'):
+            None
+            
+        elif (user_reply == 'Candidatos'):
+            None
+        
+        else:
+            bot.sendMessage(update.message.chat_id, text='Disculpa, no te he entendido :(')
+            return partidos(bot, update)
+            
+        return ConversationHandler.END
     
     @staticmethod
     def graficos(bot, update):
