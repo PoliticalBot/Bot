@@ -9,9 +9,10 @@ import Commands
 import telegram
 import Strings
 from Knowledge.News import News
+import urllib2
 from nltk.corpus import wordnet as wn
 
-INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(9)
+INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA, REPLY_OPTIONS = range(10)
 
 class InformationCommand (object):
     
@@ -33,7 +34,7 @@ class InformationCommand (object):
             InformationCommand.reformas(bot, update)
             
         elif (user_reply == 'Partidos'):
-            custom_keyboard = [['PP', 'PSOE', 'Podemos', 'Cuidadanos'], ['IU', 'ERC', 'CDC', 'PNV']]
+            custom_keyboard = [['PP', 'PSOE', 'Podemos', 'Ciudadanos'], ['IU', 'ERC', 'CDC', 'PNV']]
             reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
             bot.sendMessage(update.message.chat_id, text='Selecciona uno de los partidos políticos:', reply_markup=ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard=True, resize_keyboard=True))
             return PARTIDOS
@@ -60,9 +61,13 @@ class InformationCommand (object):
         
     @staticmethod
     def search_results(bot, update):
-        results = wn.synsets(update.message.text)[0].lemma_names('spa')
+        word = update.message.text
+        gs = goslate.Goslate()
+        word = gs.translate(word, 'en')
+        results = wn.synsets(word)[0].lemma_names('spa')
         bot.sendMessage(update.message.chat_id, text='Estos son los resultados obtenidos por "' + update.message.text + '" :')
-        bot.sendMessage(update.message.chat_id, text=results)
+        for i in results:
+            bot.sendMessage(update.message.chat_id, text=i.encode('utf8'))
         return ConversationHandler.END
         
     @staticmethod
@@ -118,7 +123,31 @@ class InformationCommand (object):
             bot.sendMessage(update.message.chat_id, text=bot_reply)
         
         elif (user_reply == 'Programa'):
-            None
+            political_party = bot.political_party
+            
+            if (political_party == 'PP'):
+                doc = open('Programas/Programa-PP-2015.pdf', 'rb')
+                bot.sendMessage(update.message.chat_id, text='Aquí tienes el programa electoral del ' + political_party.encode('utf8') + ':')
+                bot.sendDocument(update.message.chat_id, doc)
+                doc.close()
+            
+            elif (political_party == 'PSOE'):
+                doc = open('Programas/Programa-PSOE-2016.pdf', 'rb')
+                bot.sendMessage(update.message.chat_id, text='Aquí tienes el programa electoral del ' + political_party.encode('utf8') + ':')
+                bot.sendDocument(update.message.chat_id, doc)
+                doc.close()
+                
+            elif (political_party == 'Podemos'):
+                doc = open('Programas/Programa-Podemos-2016.pdf', 'rb')
+                bot.sendMessage(update.message.chat_id, text='Aquí tienes el programa electoral del ' + political_party.encode('utf8') + ':')
+                bot.sendDocument(update.message.chat_id, doc)
+                doc.close()
+                
+            elif (political_party == 'Ciudadanos'):
+                doc = open('Programas/Programa-Ciudadanos-2016.pdf', 'rb')
+                bot.sendMessage(update.message.chat_id, text='Aquí tienes el programa electoral del ' + political_party.encode('utf8') + ':')
+                bot.sendDocument(update.message.chat_id, doc)
+                doc.close()
             
         elif (user_reply == 'Candidatos'):
             None

@@ -8,7 +8,7 @@ import Strings
 from InformationCommand import InformationCommand
 from DebateCommand import DebateCommand
 
-INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA = range(9)
+INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA, REPLY_OPTIONS = range(10)
 
 class Commands (object):
     
@@ -50,9 +50,8 @@ class Commands (object):
                 
                 PARTIDOS: [RegexHandler('^(PP|PSOE|Podemos|Ciudadanos|IU|ERC|CDC|PNV)$', InformationCommand.partidos)],
                 
-                REPLY_PARTIDOS: [RegexHandler('^(Noticias|Programa|Candidatos)$', InformationCommand.reply_partidos)],
+                REPLY_PARTIDOS: [RegexHandler('^(Noticias|Programa|Candidatos)$', InformationCommand.reply_partidos)]
                 
-                BUSQUEDA: [MessageHandler([Filters.text], InformationCommand.search_results)]
             },
             
             fallbacks=[CommandHandler('cancel', None)]
@@ -66,13 +65,15 @@ class Commands (object):
             
             states={
                 
-                DEBATE_COMMAND: [RegexHandler('^(Iniciar debate|Detener debate|Opciones)$', DebateCommand.reply_options)],
+                DEBATE_COMMAND: [RegexHandler('^(Iniciar debate|Detener debate|Opciones)$', DebateCommand.reply_main_options)],
                 
                 REPLY_TEMA: [RegexHandler('^(Seleccionar tema|Buscar tema|Sugerir tema)$', DebateCommand.reply_tema)],
                 
                 SELECT_TEMA: [MessageHandler([Filters.text], DebateCommand.select_tema)],
                 
                 ACCEPT_TEMA: [MessageHandler([Filters.text], DebateCommand.accept_tema)],
+                
+                REPLY_OPTIONS: [MessageHandler([Filters.text], DebateCommand.reply_options)],
                 
                 #REFORMAS: [MessageHandler([Filters.photo], photo), CommandHandler('skip', skip_photo)],
                 
@@ -82,7 +83,7 @@ class Commands (object):
                 
                 #ESTADISTICAS: [MessageHandler([Filters.text], None)],
                 
-                BUSQUEDA: [MessageHandler([Filters.text], None)]
+                BUSQUEDA: [MessageHandler([Filters.text], DebateCommand.search_results)]
                 
             },
             

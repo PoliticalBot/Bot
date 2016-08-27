@@ -5,41 +5,43 @@ class Thing (object):
     @staticmethod
     def getSubTopicOf(topic):
         
-        if (topic == "Participación Política"):
-            return "- Asociaciones \n - Propuestas \n - Grupos Sociales"
+        topic = topic.lower()
         
-        elif (topic == "Culture"):
-            return "- Arte \n - Ciencia \n - Deportes"
+        if (topic == ("Participación Política").lower()):
+            return "- Asociaciones \n- Propuestas \n- Grupos Sociales"
+        
+        elif (topic == ("Cultura").lower()):
+            return "- Arte \n- Ciencia \n- Deportes"
             
-        elif ("Democracia"):
-            return "- Vivienda \n - Igualdad \n - Servicios Sociales"
+        elif (topic == ("Democracia").lower()):
+            return "- Vivienda \n- Igualdad \n- Servicios Sociales"
             
-        elif ("Economía"):
-            return "- Sector Primario \n - Sector Secundario \n - Sector Terciario \n - Sector Cuaternario"
+        elif (topic == ("Economía").lower()):
+            return "- Sector Primario \n- Sector Secundario \n- Sector Terciario \n- Sector Cuaternario"
             
-        elif ("Gobierno"):
-            return "- Gobierno local \n - Gobierno municipal \n - Gobierno nacional \n - Política \n - Partidos políticos"
+        elif (topic == ("Gobierno").lower()):
+            return "- Gobierno local \n- Gobierno municipal \n- Gobierno nacional \n- Política \n- Partidos políticos"
             
-        elif ("Sanidad"):
-            return "- Sanidad pública \n - Atención primaria"
+        elif (topic == ("Sanidad").lower()):
+            return "- Sanidad pública \n- Atención primaria"
             
-        elif ("Justicia"):
-            return "- Derechos humanos \n - Leyes"
+        elif (topic == ("Justicia").lower()):
+            return "- Derechos humanos \n- Leyes"
             
-        elif ("Democracia"):
+        elif (topic == ("Democracia").lower()):
             None
             
-        elif ("Ocio"):
+        elif (topic == ("Ocio").lower()):
             None
             
-        elif ("Medio Ambiente"):
+        elif (topic == ("Medio Ambiente").lower()):
             None
             
-        elif ("Personas"):
-            return "- Ciudadanos \n - Funcionarios \n - Políticos"
+        elif (topic == ("Personas").lower()):
+            return "- Ciudadanos \n- Funcionarios \n- Políticos"
             
-        elif ("Seguridad"):
-            return "- Ejército \n - Agentes medioambientales \n - Inteligencia \n - Policía"
+        elif (topic == ("Seguridad").lower()):
+            return "- Ejército \n- Agentes medioambientales \n- Inteligencia \n- Policía"
             
         else:
             return None
