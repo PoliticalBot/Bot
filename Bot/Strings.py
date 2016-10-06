@@ -15,5 +15,5 @@ INFORMACION_COMMAND = '¿Sobre qué deseas obtener información?'
 
 DEBATE_COMMAND = 'Elige una de las siguientes opciones:'
 
-TEMAS_PRINCIPALES = '- Participación política \n- Cultura \n- Democracia \n- Economía \n- Educación \n- Gobierno \n- Sanidad \n- Justicia \n- Medio ambiente \n- Personas \n- Seguridad'
+TEMAS_PRINCIPALES = '- Participación política \n- Cultura \n- Democracia \n- Economía \n- Gobierno \n- Sanidad \n- Justicia \n- Medio ambiente \n- Personas \n- Seguridad'
                 

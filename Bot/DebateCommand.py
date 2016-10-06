@@ -11,8 +11,6 @@ import threading
 import thread
 import time
 from nltk.corpus import wordnet as wn
-import urllib2
-import json
 
 INFORMACION_COMMAND, DEBATE_COMMAND, REPLY_LEYES, PARTIDOS, REPLY_PARTIDOS, BUSQUEDA, REPLY_TEMA, SELECT_TEMA, ACCEPT_TEMA, REPLY_OPTIONS = range(10)
 
@@ -85,7 +83,6 @@ class DebateCommand (object):
         user = update.message.from_user
         user_reply = update.message.text
         message_bot = 'De acuerdo, el tema escogido para el debate será "' + user_reply.encode('utf8') +'"'
-        bot.debate_theme = user_reply.encode('utf8')
         
         if (hasattr('bot', 'debate_time')):
             bot.sendMessage(update.message.chat_id, text='El debate tendrá una duración limitada de ' + bot.debate_time + ' segundos.')
@@ -95,9 +92,6 @@ class DebateCommand (object):
         bot.sendMessage(update.message.chat_id, text=message_bot)
         message_bot = 'Recuerda que podeís utilizar los comandos /informacion para obtener cualquier información que pueda enriquecer el debate, o el comando /debate para parar el debate o cambiar de tema.'
         bot.sendMessage(update.message.chat_id, text=message_bot)
-        
-        DebateCommand.find_debate_info(bot, update);
-        
         return ConversationHandler.END
         
     @staticmethod
@@ -106,14 +100,8 @@ class DebateCommand (object):
         bot.sendChatAction(update.message.chat_id, action='typing')
         
         word = update.message.text
-        results = list()
-        
-        for w in word.split():
-            try:
-                results.extend(wn.synsets(w, lang='spa')[0].lemma_names('spa'))
-            except IndexError:
-                continue
-        
+        results = wn.synsets(word, lang='spa')[0].lemma_names('spa')
+
         message_bot = ""
         
         for i in results:
@@ -123,14 +111,10 @@ class DebateCommand (object):
                 
         if (message_bot == ""):
             bot.sendMessage(update.message.chat_id, text='No he obtenido ningún resultado por "' + update.message.text.encode('utf8') + '" :(')
-            update.message.text = 'Buscar tema'
-            return DebateCommand.reply_tema(bot, update)
             
         else:
             bot.sendMessage(update.message.chat_id, text='Estos son los temas obtenidos por "' + update.message.text.encode('utf8') + '" :')
             bot.sendMessage(update.message.chat_id, text=message_bot)
-            bot.sendMessage(update.message.chat_id, text='Selecciona uno de los temas propuestos')
-            return ACCEPT_TEMA
             
         return ConversationHandler.END
         
@@ -141,50 +125,4 @@ class DebateCommand (object):
         bot.sendMessage(update.message.chat_id, text='El debate tendrá una duración limitada de ' + update.message.text.encode('utf8') + ' segundos.')
         bot.debate_time = int(user_reply)
         return ConversationHandler.END
-        
-    @staticmethod
-    def find_debate_info(bot, update):
-        word = bot.debate_theme
-        results = list()
-        programas = list()
-        political_party_aux = None
-        
-        for w in word.split():
-            try:
-                results.extend(wn.synsets(w, lang='spa')[0].lemma_names('spa'))
-            except IndexError:
-                continue
-        
-        for i in results:
-            programas = urllib2.urlopen("https://apirestpoliticalbot-servicerest.rhcloud.com/search/" + word)
-            
-        json_object = json.load(programas)
-        
-        if (json_object is not None):
-            bot.sendMessage(update.message.chat_id, text="He encontrado la siguiente información relacionada en los programas electorales de las siguientes formaciones políticas:")
-        
-        index = 1
-        
-        for i in json_object:
-            political_party = urllib2.urlopen("https://apirestpoliticalbot-servicerest.rhcloud.com/politicalParty/" + str(i["id_political_party"]))
-            nameOfPoliticalParty = json.load(political_party)
-            
-            if (political_party_aux is None):
-                political_party_aux = nameOfPoliticalParty
-                string = str(index).encode('utf8') + ") " + nameOfPoliticalParty["name"].encode('utf8') + " [Sección]-> " + i["title"].encode('utf8')
-                bot.sendMessage(update.message.chat_id, text=string)
-                index += 1
-
-            elif (nameOfPoliticalParty != political_party_aux):
-                political_party_aux = nameOfPoliticalParty
-                string = str(index).encode('utf8') + ") " + nameOfPoliticalParty["name"].encode('utf8') + " [Sección]-> " + i["title"].encode('utf8')
-                bot.sendMessage(update.message.chat_id, text=string)
-                index += 1
-                
-        #print(nameOfPoliticalParty["name"])
-        
-        #bot.sendMessage(update.message.chat_id, text=programas)
-            
-                
-        
         

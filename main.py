@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 def main():
 
     # Create the EventHandler and pass it your bot's token.
-    updater = Updater("200170954:AAHiULX1eL3kn1WcSTKlEJ4kzMKoq7zjSic")
+    updater = Updater("TOKEN")
     
     # Add commands to the dispatcher
     Commands(logger, updater)
